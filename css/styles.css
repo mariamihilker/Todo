@@ -47,6 +47,8 @@ table {
 }
 form {
     width: 100%;
+}
+.content-container {
     margin-top: 54px;
 }
 .btn-primary {
@@ -144,15 +146,16 @@ input:focus:-ms-input-placeholder {
     flex-wrap: wrap;
 }
 .items-list li, .inactive-items li {
-    width: 140px;
-    height: 140px;
+    width: 90px;
+    height: 90px;
     display: flex;
     flex-wrap: wrap;
     margin-right: 4px;
     margin-bottom: 4px;
     background-color: #D391FA;
     color: white;
-    font-size: 24px;
+    font-size: 16px;
+    line-height: 1.5;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -161,7 +164,15 @@ input:focus:-ms-input-placeholder {
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-.done-items-title, .emty-items-title {
+.history-list li {
+    cursor: pointer;
+}
+.items-list li a, .inactive-items li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.done-items-title, .emty-items-title, .history-title {
     display: block;
     margin-bottom: 32px;
     font-size: 28px;
@@ -170,7 +181,10 @@ input:focus:-ms-input-placeholder {
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-.done-items-title.show, .emty-items-title.show {
+.history-title {
+    font-size: 24px;
+}
+.done-items-title.show, .emty-items-title.show, .history-title.show {
     opacity: 1;
 }
 li.active {

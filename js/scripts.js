@@ -5,7 +5,8 @@ toggleTodo();
 //  remove checked items
 deleteDone()
 
-
+//Show items back to active from history
+restoreHistory()
 
 
 //Main Function
@@ -36,6 +37,13 @@ function deleteDone() {
     document.querySelector('.inactive-items').addEventListener('click',removeItem);
 }
 
+
+//call function to restore items from history
+function restoreHistory() {
+    document.querySelector('.history-list').addEventListener('click',restoreIrem);
+}
+
+
 //Making done items checked
 function clickToggle(e) {
     let currElement = e.target.parentElement;
@@ -64,13 +72,37 @@ function clickToggle(e) {
 function removeItem(e) {
     let currElement = e.target.parentElement;
     let doneContainer = document.querySelector('.inactive-items');
+    let historyList = document.querySelector('.history-list');
     let allDone = document.querySelector('.inactive-items').getElementsByTagName('li').length;
+    
     if(currElement.classList.contains('done')) { 
         doneContainer.removeChild(currElement);
+        currElement.classList.add('history');
+        currElement.classList.remove('done');
+        historyList.appendChild(currElement);
+        document.querySelector('.history-title').classList.add('show');
         console.log(allDone)
         if(allDone === 1) {
             document.querySelector('.done-items-title').classList.remove('show');
         }
     }
 
+}
+
+//Restore Item
+
+function restoreIrem(e) {
+    let currElement = e.target.parentElement;
+    let activeContainer = document.querySelector('.items-list');
+    let historyList = document.querySelector('.history-list');
+    let historyEmpty = document.querySelector('.history-list').getElementsByTagName('li').length;
+    if(currElement.classList.contains('history')) {
+        currElement.classList.add('active');
+        currElement.classList.remove('history');
+        historyList.removeChild(currElement);
+        activeContainer.appendChild(currElement);
+        if(historyEmpty === 1) {
+            document.querySelector('.history-title').classList.remove('show');
+        }
+    }
 }

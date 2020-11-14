@@ -13,25 +13,36 @@
 <body>
     <div class="main-wrap">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                <form action="index.html" class="todo-form form-inline">
-                    <div class="form-group mb-2">
-                    <label for="new-item">New Todo</label>
-                    <input type="text" class="item-input form-control form-control-lg col-md-8" id="new-item" placeholder="Type new">
-                    <button type="submit" class="btn btn-primary col-md-4">Add</button> 
-                </form>
-                <div class="items-container">
-                    <h2 class="emty-items-title">There is no Todoes anymore :)</h2>
-                    <ul class="items-list"></ul>
-                </div>
-                <div class="inactive-container">
-                    <h2 class="done-items-title">Already Done!</h2>
-                    <ul class="inactive-items">
+            <div class="content-container row justify-content-center">
+                <div class="col-md-6">
+                    <form action="index.html" class="todo-form form-inline">
+                        <div class="form-group mb-2">
+                        <label for="new-item">New Todo</label>
+                        <input type="text" class="item-input form-control form-control-lg col-md-8" id="new-item" placeholder="Type new">
+                        <button type="submit" class="btn btn-primary col-md-4">Add</button> 
+                        </div>
+                    </form>
+                    <div class="items-container">
+                        <h2 class="emty-items-title">There is no Todos anymore :)</h2>
+                        <ul class="items-list"></ul>
+                    </div>
+                    <div class="inactive-container">
+                        <h2 class="done-items-title">Already Done!</h2>
+                        <ul class="inactive-items">
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="col-md-2">
+                    <h3 class="history-title">History</h3>
+                    <div class="history-container">
+                        <ul class="history-list">
+                            
+                        </ul>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
