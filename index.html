@@ -15,16 +15,24 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                <form class="form-inline">
+                <form action="index.html" class="todo-form form-inline">
                     <div class="form-group mb-2">
                     <label for="new-item">New Todo</label>
-                    <input type="text" class="form-control form-control-lg col-md-8" id="new-item" placeholder="Type new">
+                    <input type="text" class="item-input form-control form-control-lg col-md-8" id="new-item" placeholder="Type new">
                     <button type="submit" class="btn btn-primary col-md-4">Add</button> 
-                </form>    
+                </form>
+                <div class="items-container">
+                    <ul class="items-list"></ul>
+                </div>
+                <div class="inactive-container">
+                    <ul class="inactive-items">
+                        
+                    </ul>
+                </div>
                 </div>
             </div>
         </div>
     </div>
-    <script scr="js.scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -132,3 +132,32 @@ input:focus:-ms-input-placeholder {
     border-color: #6B00D7;
     background-color: #6B00D7;  
 }
+
+.items-container {
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 54px;
+    border-bottom: 1px solid #BEC0C2;
+}
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.items-list li {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background-color: #D391FA;
+    color: white;
+    font-size: 24px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.items-list li:hover {
+    background-color: #A230ED;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
